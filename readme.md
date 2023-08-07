@@ -19,7 +19,7 @@ const { generateDuitNowStr } = require('duitnow-js')
 const qrString = generateDuitNowStr({
     account: '0000000000000000000000072339',
     app: '890087', // unknown ID
-    category: '7399', // unknown Merchant Category Code
+    category: '7399', // Merchant Category Code
     name: 'GINTELL REST N GO SDN BHD',
     city: 'KEPONG MENJALARA',
     postcode: '52200',
@@ -43,6 +43,10 @@ npm run test
 ### Output
 
 ![Test Output](/output.png "Test Output")
+
+### Merchant Category Code
+
+[https://global.alipay.com/docs/ac/ref/mcccodes](https://global.alipay.com/docs/ac/ref/mcccodes)
 
 ### Credit
 
