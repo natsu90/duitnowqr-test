@@ -1,6 +1,13 @@
 
 ## DuitNow QR Code Generator Test
 
+i found there's an interesting use case of DuitNow from [@kidino](https://www.github.com/kidino), where you would scan a DuitNow QR code on an electric massage chair, then the chair would work after you successfully paid.
+
+so i tried to find a way to generate your own DuitNow QR, without going through the banking app, but it seems to be that some organisation (looking at you [@paynet-my](https://www.github.com/paynet-my)) is trying to gatekeep this info.
+
+in case of PayNow, generating a PayNow QR code is quite straight forward when you already have your own PayNow ID. but generating a DuitNow QR is a pain in the ass with seems to be unnecessary complexity.
+
+below is the source code of DuitNow QR generator after reverse engineering a lot of DuitNow QRs. but i still can't manage to get how we could get the `account` and `app` value, or simply implement it with our own DuitNow ID like PayNow do.
 
 ### Source
 
@@ -17,8 +24,8 @@ npm install gist:f45dc88b38a037325ad9095163b82b42
 const { generateDuitNowStr } = require('duitnow-js')
 
 const qrString = generateDuitNowStr({
-    account: '0000000000000000000000072339',
-    app: '890087', // unknown ID
+    account: '0000000000000000000000072339', // UNKNOWN Account ID
+    app: '890087', // UNKNOWN ID
     category: '7399', // Merchant Category Code
     name: 'GINTELL REST N GO SDN BHD',
     city: 'KEPONG MENJALARA',
@@ -42,7 +49,7 @@ npm run test
 
 ### Output
 
-![Test Output](/output.png "Test Output")
+![Test Output](/images/output.png "Test Output")
 
 ### Merchant Category Code
 
