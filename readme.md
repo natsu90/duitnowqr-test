@@ -55,7 +55,13 @@ npm run test
 
 [https://global.alipay.com/docs/ac/ref/mcccodes](https://global.alipay.com/docs/ac/ref/mcccodes)
 
-### Credit
+### DuitNow Limitations
+
+1. Can't use our own registered DuitNow ID like mobile number, NRIC, etc. Unlike PayNow(SG) & PromptPay(TH)
+
+2. Can't use the same account ID in static generated QR code into a dynamic generated QR code with a specified amount
+
+### Credits
 
 [https://gist.github.com/chengkiang/7e1c4899768245570cc49c7d23bc394c](https://gist.github.com/chengkiang/7e1c4899768245570cc49c7d23bc394c)
 
